@@ -3,3 +3,8 @@ remote_theme: SimplRStats/simplRstats
 baseurl: ""
 url: https://simplrstats.github.io
 
+theme_settings:
+    header_text: Welcome to my Jekyll blog
+    header_text_feature_image: assets/img/sample3.png
+    footer_text: Copyright 2018
+
