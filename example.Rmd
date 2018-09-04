@@ -19,7 +19,21 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 ```{r cars}
-summary(cars)
+library(greta)
+x <- iris$Petal.Length
+y <- iris$Sepal.Length
+plot(x,y)
+
+int <- normal(0, 5)
+coef <- normal(0, 3)
+sd <- lognormal(0, 3)
+
+mean <- int + coef * x
+distribution(y) <- normal(mean, sd)
+m <- model(int, coef, sd)
+plot(m)
+draws <- mcmc(m, n_samples = 1000, chains = 3)
+bayesplot::mcmc_trace(draws)
 ```
 
 ## Including Plots
