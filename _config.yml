@@ -1,7 +1,8 @@
 theme: jekyll-theme-cayman
 remote_theme: SimplRStats/simplRstats
-baseurl: ""
+
 url: https://simplrstats.github.io
+baseurl: ""
 
 theme_settings:
     header_text: Welcome to my Jekyll blog
