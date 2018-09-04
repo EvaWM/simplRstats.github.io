@@ -1,2 +1,5 @@
 theme: jekyll-theme-cayman
 remote_theme: SimplRStats/simplRstats
+baseurl: ""
+url: https://simplrstats.github.io
+
